@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HF Propagazione - Winston</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Propagazione HF</h1>
+    <div id="data-box">
+      <p><strong>SFI:</strong> <span id="sfi">...</span></p>
+      <p><strong>Sunspots:</strong> <span id="sunspots">...</span></p>
+      <p><strong>K-Index:</strong> <span id="kindex">...</span></p>
+      <p><strong>X-Ray:</strong> <span id="xray">...</span></p>
+      <p><strong>Raccomandazione:</strong> <span id="recommendation">Caricamento...</span></p>
+      <p><strong>Posizione stimata:</strong> <span id="geoMessage">Geolocalizzazione in corso...</span></p>
+    </div>
+    <label for="zoneSelect">Correggi zona:</label>
+    <select id="zoneSelect" onchange="overrideZone(this.value)">
+      <option value="">—</option>
+      <option value="Europa">Europa</option>
+      <option value="Nord America">Nord America</option>
+      <option value="Sud America">Sud America</option>
+      <option value="Asia">Asia</option>
+      <option value="Africa">Africa</option>
+      <option value="Oceania">Oceania</option>
+      <option value="Antartide">Antartide</option>
+    </select>
+    <button onclick="speakWinston()">Fammi parlare</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
